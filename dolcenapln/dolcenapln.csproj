@@ -92,13 +92,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\wirus.gif" />
-    <None Include="Resources\678093-pin-128active.png" />
-    <None Include="Resources\678093-pin-128inactive.png" />
     <None Include="Resources\save-icon--1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\smerfy-pracus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\678093-pin-128inactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\678093-pin-128active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ikona.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wirus.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

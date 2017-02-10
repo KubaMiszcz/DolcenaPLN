@@ -18,7 +18,8 @@ namespace dolcenapln
     public partial class MainForm : Form
     {
         About pomocokno = new About();
-        float stawkaUSD, cenaUSD, cenaPLN;
+        float stawkaUSD, cenaUSD, cenaPLN,cenaZaSztuke;
+        int sztuk;
         String dec_separator = ""+Convert.ToChar(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
         private String wrong_decsep;
 
@@ -29,7 +30,7 @@ namespace dolcenapln
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            zawszeNaWierzchuToolStripMenuItem.Checked = true;
+            zawszeNaWierzchuToolStripMenuItem1.Checked = true;
             this.TopMost = true;
             this.Opacity = 1;
             if (dec_separator == ".") wrong_decsep = ",";
@@ -40,6 +41,7 @@ namespace dolcenapln
             cenaUSD = float.Parse(cenaUSD_textbox.Text);
             cenaPLN = stawkaUSD * cenaUSD;
             cenaPLN_textbox.Text = cenaPLN.ToString();
+            przeliczUSDnaPLN();
         }
 
         private String Load_USD_rate(String filename)
@@ -83,9 +85,12 @@ namespace dolcenapln
             {
                 stawkaUSD = float.Parse(stawkaUSD_textbox.Text.Replace(wrong_decsep, dec_separator));
                 cenaUSD = float.Parse(cenaUSD_textbox.Text.Replace(wrong_decsep, dec_separator));
+                sztuk = int.Parse(tbSztuk.Text);
                 cenaPLN = stawkaUSD * cenaUSD;
-                cenaPLN_textbox.Text = cenaPLN.ToString();
-                }
+                cenaZaSztuke = cenaPLN/sztuk;
+                cenaPLN_textbox.Text = cenaPLN.ToString("0.00");
+                tbPLNzaSzt.Text = cenaZaSztuke.ToString("0.00");
+            }
         }
 
         void przeliczPLNnaUSD()
@@ -150,18 +155,25 @@ namespace dolcenapln
             Save_USD_rate("USD_rate.txt");
         }
 
+        private void tbSztuk_TextChanged(object sender, EventArgs e)
+        {
+            przeliczUSDnaPLN();
+        }
+
         private void btnAlwaysOnTop_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
+            Button btn = btnAlwaysOnTop;
             if (this.TopMost)
             {
                 this.TopMost = false;
-                btn.BackgroundImage = dolcenapln.Properties.Resources._678093_pin_128inactive;
+                zawszeNaWierzchuToolStripMenuItem1.Checked = false;
+                btn.BackgroundImage = Properties.Resources._678093_pin_128inactive;
             }
             else
             {
                 this.TopMost = true;
-                btn.BackgroundImage = dolcenapln.Properties.Resources._678093_pin_128active;
+                zawszeNaWierzchuToolStripMenuItem1.Checked = true;
+                btn.BackgroundImage = Properties.Resources._678093_pin_128active;
             }
 
         }
