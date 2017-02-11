@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>-- stawke wczytuje z pliku
+
+-- nowa stawke mozna sobie zapisac 
+to ja wczyta nastepnym razem
+
+-- pinezka trzyma programik zawsze na wierzchu
+
+-- liczba sztuk to ponizej pokaze ile za sztuke
+
+jakbysta chcieli jakies usprawnienia to piszta na maila</value>
+  </data>
 </root>
