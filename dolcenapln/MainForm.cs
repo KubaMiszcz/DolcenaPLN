@@ -160,6 +160,20 @@ namespace dolcenapln
             przeliczUSDnaPLN();
         }
 
+        private void stawkaUSDtextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                stawkaUSD += 0.01f;
+                stawkaUSD_textbox.Text = stawkaUSD.ToString("0.00");
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                stawkaUSD -= 0.01f;
+                stawkaUSD_textbox.Text = stawkaUSD.ToString("0.00");
+            }
+        }
+
         private void btnAlwaysOnTop_Click(object sender, EventArgs e)
         {
             Button btn = btnAlwaysOnTop;

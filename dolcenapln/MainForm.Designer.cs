@@ -65,6 +65,7 @@
             this.stawkaUSD_textbox.Text = "3,75";
             this.stawkaUSD_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.stawkaUSD_textbox.TextChanged += new System.EventHandler(this.stawkaUSD_textbox_TextChanged);
+            this.stawkaUSD_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.stawkaUSDtextbox_KeyDown);
             // 
             // cenaUSD_textbox
             // 
@@ -165,21 +166,21 @@
             this.zawszeNaWierzchuToolStripMenuItem1.Checked = true;
             this.zawszeNaWierzchuToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.zawszeNaWierzchuToolStripMenuItem1.Name = "zawszeNaWierzchuToolStripMenuItem1";
-            this.zawszeNaWierzchuToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.zawszeNaWierzchuToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.zawszeNaWierzchuToolStripMenuItem1.Text = "Zawsze na wierzchu";
             this.zawszeNaWierzchuToolStripMenuItem1.Click += new System.EventHandler(this.btnAlwaysOnTop_Click);
             // 
             // przezroczystosc75ToolStripMenuItem
             // 
             this.przezroczystosc75ToolStripMenuItem.Name = "przezroczystosc75ToolStripMenuItem";
-            this.przezroczystosc75ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.przezroczystosc75ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.przezroczystosc75ToolStripMenuItem.Text = "Przezroczystosc 75%";
             this.przezroczystosc75ToolStripMenuItem.Click += new System.EventHandler(this.przezroczystość75ToolStripMenuItem_Click);
             // 
             // aboutHelpToolStripMenuItem
             // 
             this.aboutHelpToolStripMenuItem.Name = "aboutHelpToolStripMenuItem";
-            this.aboutHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutHelpToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.aboutHelpToolStripMenuItem.Text = "About/Help";
             this.aboutHelpToolStripMenuItem.Click += new System.EventHandler(this.kubaMiszcz2015ToolStripMenuItem_Click);
             // 
